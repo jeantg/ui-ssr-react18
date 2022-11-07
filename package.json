@@ -1,8 +1,8 @@
 {
   "scripts": {
     "build:css": "tailwindcss -o ./build/index.css --watch --minify",
-    "bundler:dev": "NODE_ENV=development nodemon --exec ts-node -T ./webpack.config.ts",
-    "bundler:prod": "NODE_ENV=production ts-node -T ./webpack.config.ts",
+    "bundler:dev": "NODE_ENV=development nodemon --exec ts-node -T webpack.config.ts",
+    "bundler:prod": "NODE_ENV=production ts-node -T webpack.config.ts",
     "dev": "run-p build:css bundler:dev server:dev",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "lint": "prettier --check \"src/**/*.{ts,tsx}\"",
